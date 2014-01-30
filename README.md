@@ -4,7 +4,7 @@ Mozilla Monument Name Finder
 A quick hack to show where the name of people who helped Mozilla is located on the awesome Mozilla SF monument https://wiki.mozilla.org/Monument. 
 
 You can see it action: 
-http://thewebrocks.com/demos/mozilla-monument-name-finder/
+http://christianheilmann.com/2014/01/30/quick-hack-the-mozilla-monument-name-finder/
 
 There is also a very plain vanilla version for mobile devices (using appcache to work offline) at:
 http://thewebrocks.com/demos/mozilla-monument-name-finder/mobilefinder.html
