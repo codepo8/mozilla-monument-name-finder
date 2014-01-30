@@ -215,6 +215,11 @@ input[type=submit] {
   transform: rotateY(270deg) translateZ(75px);
   background: #d98c1f;
 }
+
+.cube:hover {
+  -webkit-animation-play-state: paused;  
+  animation-play-state: paused;  
+}
 .cube {
   -webkit-animation: likearecordbaby 5s infinite linear;
   animation: likearecordbaby 5s infinite linear;
