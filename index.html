@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mozilla Monument Name Finder</title>
+  <link rel="stylesheet" type="text/css" href="mozmonument.css">
+</head>
+<body>
+
+<div class="theform">
+  <form>
+    <label>Find your name: <input id="name" type="text"></label>
+    <input type="submit" value="go">
+  <div class="names"><p>Loading data…</p></div>
+  </form>
+</div> 
+<!-- technically, this should follow function (god, I crack myself up) --> 
+
+<section>
+  <h1>Mozilla Monument Name Finder</h1>
+  <p>Want to know where your name is on the fabulous <a href="https://wiki.mozilla.org/Monument">Mozilla monument outside the San Francisco office</a>?</p>
+  <p>This will show you. Simply search for your name and activate it in the list of names. You'll see a yellow rectangle on the rotating model on this page.</p>
+  <p>Thanks to each and every one of the 4536 people on this monument, you did make a difference and you still do. Without you, we'll all be using one browser in offices for lots of money and hate the web.</p>
+</section>
+
+<footer>
+  <p>Written by <a href="http://twitter.com/codepo8">Chris Heilmann</a>, using a <a href="https://github.com/chrismore/mozmonument2json">dataset provided by Chris More</a>. Rotating column thingamabob created with <a href="http://thewebrocks.com/demos/3D-css-tester/">3D CSS Tester</a>. Want to play with this? Go <a href="https://github.com/codepo8/mozilla-monument-name-finder">get mozilla-monument-name-finder on GitHub</a>.</p>
+</footer>
+
+<!-- all visual stuff and junk and such -->
+<div class="rotatingmonument">
+  <div class="cube">
+    <img src="firefox-oct-2013.png" alt="Firefox Logo">
+    <div class="front">1<span class="nametag"></span></div>
+    <div class="left">2</div>
+    <div class="back">3</div>
+    <div class="right">4</div>
+  </div>
+</div>
+<div class="textlocation"></div>
+
+<script src="monumentfinder.js"></script>
+<!-- much vanilla, so amaze, wow -->
+</body>
+</html>

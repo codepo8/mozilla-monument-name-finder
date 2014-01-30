@@ -1,0 +1,184 @@
+html {
+  background: #f8f8f8;
+  background-image: linear-gradient(to top, #ccc 30%, #f8f8f8 100%);
+  height: 100%;
+}
+body {
+  font-family: "open sans", Helvetica, sans-serif;
+  color: #666;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+section {
+  display: block;
+  margin: 10px 30px 20px 310px;
+}
+h1 {
+  color: #285fad;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: normal;
+  letter-spacing: -1px
+}
+section a {
+  color: #000;
+}
+footer {
+  padding: 5px 10px;
+  border-top: 1px solid #333;
+  font-size: 16px;
+  color: #666;
+  margin: 50px 30px 0 310px;
+}
+footer a {
+  color: #333;
+}
+.names li a {
+  color: #fff;
+  text-decoration: none;
+}
+.names {
+  overflow: auto;
+  background: transparent;
+}
+.names ul {
+  margin: 20px 0;
+  padding: 0;
+}
+.names li {
+  float: left; 
+  background: #333;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 5px;
+  list-style: none; display: block; 
+  margin: 0 1em .5em 0;
+  transition: 0.5s;
+}
+.names li:hover, .names .current {
+  background: #000;
+}
+.theform {
+  display: block;
+  margin-left: 300px;
+  background: #d98c1f;
+  padding: 20px 50px;
+  color: #000;
+}
+.theform form {
+  opacity: 0;
+  transition: 0.5s;
+}
+.dataloaded .theform form {
+  opacity: 1;
+}
+input[type=text] {
+  border: none;
+  background: #f8f8f8;
+  font-size: 20px;
+}
+input[type=submit] {
+  border: none;
+  background: #285fad;
+  color: #fff;
+  font-size: 20px;
+}
+.textlocation {
+  position: absolute;
+  top: 150px;
+  left: 20px;
+  font-size: 13px;
+  color: #000;
+}
+.textlocation ul {
+  margin: 0;
+  padding: 0;
+}
+.textlocation li {
+  list-style: none;
+}
+/* 
+  Ah, such joy typing all these -webkit- things when people 
+  on Twitter tell you every 2 minutes that Chrome is so
+  much more 'modern' than other browsers…
+*/
+
+.rotatingmonument {
+  position:absolute;  
+  top: 0;  
+  left: 150px; 
+  -webkit-perspective: 800px;
+  perspective: 800px; 
+}
+.cube {
+  display: block;  
+  position: relative;  
+  margin: 5px auto;
+  height: 500px;  
+  width: 100px;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: rotateX(0) rotateY(0) rotateZ(0);
+  transform-style: preserve-3d;
+  transform: rotateX(0) rotateY(0) rotateZ(0);
+}
+/* ^ no, CSSLint, -moz- -o- and -ms- are not needed any longer! */
+.cube div {
+  position: absolute;  
+  height: 500px;  
+  width: 100px;
+  background: #285fad;
+  opacity: 0.8;
+  text-align: center;
+  color: #fff;
+  line-height: 300px;
+  font-size: 100px;
+}
+.cube .nametag {
+  display: block;
+  background: yellow;
+  width: 30px;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.cube img {
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+.front {
+  -webkit-transform: translateZ(50px);
+  transform: translateZ(50px);
+}
+.back {
+  -webkit-transform: rotateY(180deg) translateZ(50px);
+  transform: rotateY(180deg) translateZ(50px);
+}
+.cube div.right {
+  -webkit-transform: rotateY(90deg) translateZ(50px);
+  transform: rotateY(90deg) translateZ(50px);
+  background: #d98c1f;
+}
+.cube div.left {
+  -webkit-transform: rotateY(270deg) translateZ(50px);
+  transform: rotateY(270deg) translateZ(50px);
+  background: #d98c1f;
+}
+.cube {
+  -webkit-animation: likearecordbaby 5s infinite linear;
+  animation: likearecordbaby 5s infinite linear;
+}
+@-webkit-keyframes likearecordbaby {
+  0% { -webkit-transform: rotateY(0); }
+  100% { -webkit-transform: rotateY(360deg); }
+}
+/* 
+  ^ go home CSSLint, you are drunk. It is not an error adding 
+    -webkit- only in a -webkit- only keyframe definition. 
+*/
+@keyframes likearecordbaby {
+  0% { transform: rotateY(0); }
+  100% { transform: rotateY(360deg); }
+}
