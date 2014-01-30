@@ -72,11 +72,11 @@
       //   huh?
 
       // Calculate the position of the yellow highlight from number and row
-      tag.style.left = namedata.number * (100/12) + 'px';
-      var topfromrow = namedata.row * (250/65);
+      tag.style.left = namedata.number * (150/12) + 'px';
+      var topfromrow = namedata.row * (150/65);
       // if the name is in the lower panel, add more pixels
       if (namedata.panel === 'lower') {
-        topfromrow += 250;
+        topfromrow += 150;
       }
       tag.style.top = topfromrow + 'px';
       textlocation.innerHTML = '<ul>' +

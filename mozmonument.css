@@ -86,7 +86,7 @@ input[type=submit] {
 }
 .textlocation {
   position: absolute;
-  top: 150px;
+  top: 50px;
   left: 20px;
   font-size: 13px;
   color: #000;
@@ -107,7 +107,7 @@ input[type=submit] {
 .rotatingmonument {
   position:absolute;  
   top: 0;  
-  left: 150px; 
+  left: 80px; 
   -webkit-perspective: 800px;
   perspective: 800px; 
 }
@@ -115,8 +115,8 @@ input[type=submit] {
   display: block;  
   position: relative;  
   margin: 5px auto;
-  height: 500px;  
-  width: 100px;
+  height: 300px;  
+  width: 150px;
   -webkit-transform-style: preserve-3d;
   -webkit-transform: rotateX(0) rotateY(0) rotateZ(0);
   transform-style: preserve-3d;
@@ -125,14 +125,24 @@ input[type=submit] {
 /* ^ no, CSSLint, -moz- -o- and -ms- are not needed any longer! */
 .cube div {
   position: absolute;  
-  height: 500px;  
-  width: 100px;
+  height: 300px;  
+  width: 150px;
   background: #285fad;
   opacity: 0.8;
   text-align: center;
   color: #fff;
   line-height: 300px;
   font-size: 100px;
+}
+.cube div::after {
+  content: '';
+  display: block;
+  width: 150px;
+  height: 2px;
+  position: relative;
+  top: -50%;
+  left: 0;
+  background: #fff;
 }
 .cube .nametag {
   display: block;
@@ -144,26 +154,27 @@ input[type=submit] {
   left: 0;
 }
 .cube img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   display: block;
+  margin: 30px 0 -20px 0;
 }
 .front {
-  -webkit-transform: translateZ(50px);
-  transform: translateZ(50px);
+  -webkit-transform: translateZ(75px);
+  transform: translateZ(75px);
 }
 .back {
-  -webkit-transform: rotateY(180deg) translateZ(50px);
-  transform: rotateY(180deg) translateZ(50px);
+  -webkit-transform: rotateY(180deg) translateZ(75px);
+  transform: rotateY(180deg) translateZ(75px);
 }
 .cube div.right {
-  -webkit-transform: rotateY(90deg) translateZ(50px);
-  transform: rotateY(90deg) translateZ(50px);
+  -webkit-transform: rotateY(90deg) translateZ(75px);
+  transform: rotateY(90deg) translateZ(75px);
   background: #d98c1f;
 }
 .cube div.left {
-  -webkit-transform: rotateY(270deg) translateZ(50px);
-  transform: rotateY(270deg) translateZ(50px);
+  -webkit-transform: rotateY(270deg) translateZ(75px);
+  transform: rotateY(270deg) translateZ(75px);
   background: #d98c1f;
 }
 .cube {
