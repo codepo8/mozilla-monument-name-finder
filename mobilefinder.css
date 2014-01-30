@@ -1,6 +1,8 @@
 body {
   font-family: "open sans", sans-serif;
   background: #f8f8f8;
+  margin: 0;
+  padding: 0;
 }
 ul {
   margin: 0;
@@ -14,12 +16,19 @@ li a {
   margin-bottom: 10px;
   list-style: none;
   background: #d98c1f;
+  border-radius: 5px;
   text-decoration: none;
   color: #fff;
   text-shadow: 1px 1px 1px #000;
+  transition: 0.2s;
+}
+li.current a {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background: #285fad;
 }
 li > ul {
-  max-height: 1px;
+  max-height: 0;
   opacity: 1;
   background: #ccc;
   overflow: hidden;
@@ -35,8 +44,14 @@ li.current > ul {
 li > ul > li {
   padding: 0 5px 5px 5px;
 }
+.theform {
+  padding: 0 5px;
+}
 h1 {
-  color: #285fad;
+  padding: 2px 5px;
+  background: #285fad;
+  color: #fff;
+  margin: 0 0 10px 0;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: normal;

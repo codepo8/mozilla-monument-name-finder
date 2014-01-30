@@ -109,13 +109,14 @@ input[type=submit] {
   top: 0;  
   left: 80px; 
   -webkit-perspective: 800px;
-  perspective: 800px; 
+  perspective: 800px;
+  transform-origin: 50% 20%;
 }
 .cube {
   display: block;  
   position: relative;  
   margin: 5px auto;
-  height: 300px;  
+  height: 430px;  
   width: 150px;
   -webkit-transform-style: preserve-3d;
   -webkit-transform: rotateX(0) rotateY(0) rotateZ(0);
@@ -133,6 +134,43 @@ input[type=submit] {
   color: #fff;
   line-height: 300px;
   font-size: 100px;
+}
+.cube p {
+  position: absolute;  
+  width: 150px;
+  margin: 0 auto;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  background: #999;
+  opacity: 0.8;
+  color: #000;
+}
+
+.cube .embarcadero {
+  -webkit-transform: translate3d(100px,20px,100px) rotateY(45deg) rotateX(80deg);
+}
+.cube .harrison {
+  -webkit-transform: translate3d(-150px,20px,100px) rotateY(315deg) rotateX(80deg);
+}
+.cube .building {
+  -webkit-transform: translate3d(-150px,20px,-100px) rotateY(225deg) rotateX(80deg);
+}
+.cube .stairs {
+  -webkit-transform: translate3d(100px,20px,-150px) rotateY(135deg) rotateX(80deg);
+}
+
+.cube .embarcadero {
+  transform: translate3d(100px,20px,100px) rotateY(45deg) rotateX(80deg);
+}
+.cube .harrison {
+  transform: translate3d(-150px,20px,100px) rotateY(315deg) rotateX(80deg);
+}
+.cube .building {
+  transform: translate3d(-150px,20px,-100px) rotateY(225deg) rotateX(80deg);
+}
+.cube .stairs {
+  transform: translate3d(100px,20px,-150px) rotateY(135deg) rotateX(80deg);
 }
 .cube div::after {
   content: '';
